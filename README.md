@@ -13,12 +13,12 @@ The NoSQL_setup_starter.ipynb notebook is used for this section:
  * Data Import-  The data in the establishments.json file has been imported from the Terminal. The database is named **uk_food** and the collection is called **establishments**. The command used for import is:
         **mongoimport --type json -d uk_food -c establishments --drop --jsonArray establishments.json**
  * Initial setup:
-       * Required libraries (PyMongo and pprint) were imported.
-       * A MongoDB client instance was created to interact with the database.
+       Required libraries (PyMongo and pprint) were imported.
+       A MongoDB client instance was created to interact with the database.
  * Verification:
-       * Listed all databases to confirm uk_food is created.
-       * Listed collections to ensure establishments is present.
-       * Displayed a sample document from the collection using find_one() and pprint.
+       Listed all databases to confirm uk_food is created.
+       Listed collections to ensure establishments is present.
+       Displayed a sample document from the collection using find_one() and pprint.
        
 
 ### Part 2: Database Updates
@@ -28,11 +28,12 @@ Adding a New Establishment:
 1. A new establishment, "Penang Flavours," was added to the database with the following details:
    
 {
+
     "BusinessName":"Penang Flavours",
     
-    "BusinessType":"Restaurant/Cafe/Canteen",
-    
-    "BusinessTypeID":"",
+     "BusinessType":"Restaurant/Cafe/Canteen",
+     
+     "BusinessTypeID":"",
     
     "AddressLine1":"Penang Flavours",
     
@@ -74,6 +75,10 @@ Adding a New Establishment:
     "Distance":4623.9723280747176,
     
     "NewRatingPending":True
+    
+   
+    
+    
 }
 
 3.  Updating BusinessTypeID:
