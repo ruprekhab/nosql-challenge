@@ -12,56 +12,76 @@ This project explores and analyzes food establishment ratings across the United 
 The NoSQL_setup_starter.ipynb notebook is used for this section:
     * Data Import-  The data in the establishments.json file has been imported from the Terminal. The database is named **uk_food** and the collection is called **establishments**. The command used for import is:
         **mongoimport --type json -d uk_food -c establishments --drop --jsonArray establishments.json**
-
-
     * Initial setup:
-        * Required libraries (PyMongo and pprint) were imported.
-        * A MongoDB client instance was created to interact with the database.
+       * Required libraries (PyMongo and pprint) were imported.
+       * A MongoDB client instance was created to interact with the database.
     * Verification:
-        *Listed all databases to confirm uk_food is created.
-        *Listed collections to ensure establishments is present.
-        *Displayed a sample document from the collection using find_one() and pprint.
+       * Listed all databases to confirm uk_food is created.
+       * Listed collections to ensure establishments is present.
+       * Displayed a sample document from the collection using find_one() and pprint.
+       
 
 ### Part 2: Database Updates
 The NoSQL_setup_starter.ipynb notebook was also used for database updates:
 
 Adding a New Establishment:
 1. A new establishment, "Penang Flavours," was added to the database with the following details:
+   
 {
     "BusinessName":"Penang Flavours",
+    
     "BusinessType":"Restaurant/Cafe/Canteen",
+    
     "BusinessTypeID":"",
+    
     "AddressLine1":"Penang Flavours",
+    
     "AddressLine2":"146A Plumstead Rd",
+    
     "AddressLine3":"London",
+    
     "AddressLine4":"",
+    
     "PostCode":"SE18 7DY",
+    
     "Phone":"",
+    
     "LocalAuthorityCode":"511",
+    
     "LocalAuthorityName":"Greenwich",
+    
     "LocalAuthorityWebSite":"http://www.royalgreenwich.gov.uk",
+    
     "LocalAuthorityEmailAddress":"health@royalgreenwich.gov.uk",
+    
     "scores":{
         "Hygiene":"",
+        
         "Structural":"",
+        
         "ConfidenceInManagement":""
-    },
+            },
+            
     "SchemeType":"FHRS",
+    
     "geocode":{
         "longitude":"0.08384000",
         "latitude":"51.49014200"
     },
+    
     "RightToReply":"",
+    
     "Distance":4623.9723280747176,
+    
     "NewRatingPending":True
 }
 
-2.  Updating BusinessTypeID:
+3.  Updating BusinessTypeID:
     * Queried for the BusinessTypeID corresponding to "Restaurant/Cafe/Canteen" and updated the new establishment accordingly.
-3.  Removing Establishments in Dover:
+4.  Removing Establishments in Dover:
     * Counted the documents associated with the "Dover" Local Authority.
     * Deleted these records and verified their removal.
-4.  Data Type Conversion:
+5.  Data Type Conversion:
     * Converted latitude and longitude fields to decimal numbers.
     * Converted RatingValue to integers, ensuring non-numeric values were coerced to null beforehand.
 
