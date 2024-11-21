@@ -10,12 +10,12 @@ This project explores and analyzes food establishment ratings across the United 
 
 ### Part 1: Database and Jupyter Notebook Set Up
 The NoSQL_setup_starter.ipynb notebook is used for this section:
-    * Data Import-  The data in the establishments.json file has been imported from the Terminal. The database is named **uk_food** and the collection is called **establishments**. The command used for import is:
+ * Data Import-  The data in the establishments.json file has been imported from the Terminal. The database is named **uk_food** and the collection is called **establishments**. The command used for import is:
         **mongoimport --type json -d uk_food -c establishments --drop --jsonArray establishments.json**
-    * Initial setup:
+ * Initial setup:
        * Required libraries (PyMongo and pprint) were imported.
        * A MongoDB client instance was created to interact with the database.
-    * Verification:
+ * Verification:
        * Listed all databases to confirm uk_food is created.
        * Listed collections to ensure establishments is present.
        * Displayed a sample document from the collection using find_one() and pprint.
